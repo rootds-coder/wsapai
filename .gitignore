@@ -1,0 +1,12 @@
+# Folders
+wwwebauth/
+files/
+.wwebjs_auth/
+.wwebjs_cache/
+node_modules/
+
+# Environment
+.env
+.env.*
+!.env.example
+node_modules/
