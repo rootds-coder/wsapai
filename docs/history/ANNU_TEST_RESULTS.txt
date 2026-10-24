@@ -1,0 +1,42 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> devils-ai@1.0.0 test
+> node --test tests/*.test.cjs
+
+✔ feminine grammar handles intervening words and chained verbs (1.754516ms)
+✔ preserves user, third person, quoted text and object agreement (0.271922ms)
+✔ accepts both history formats and preserves user words (0.695498ms)
+✔ persona switch resets history, removes system roles and menu (0.756569ms)
+✔ voice current turn de-duplicated and Gemini roles normalized (0.250461ms)
+✔ cleaner retains substantive answer and honest identity (0.296969ms)
+✔ primary uses same persona and history, excludes global KB (0.350358ms)
+✔ fallback uses identical prompt and normalized history with bounded request (0.424568ms)
+✔ provider outage does not invent an unrelated mood or topic (0.279643ms)
+✔ request histories remain isolated under concurrency (0.710686ms)
+✔ routing integration retains group source and skips KB before Annu (1.313463ms)
+✔ default group mode is disabled and wildcard is not an allowlist (3.105809ms)
+✔ DM routed back, unlisted group and own message ignored (0.429095ms)
+✔ unmentioned text retained but no automatic spam (0.568441ms)
+✔ mention supports device-normalized PN and LID (0.233445ms)
+✔ reply to bot triggers; wrapped content unwrapped (0.198584ms)
+✔ cooldown and duplicate delivery suppressed (0.227357ms)
+✔ history stays inside its group (0.85211ms)
+✔ member stop/resume and admin-only pause/on (0.399261ms)
+✔ spontaneous option is opt-in (0.241558ms)
+✔ old messages are not replayed (0.24319ms)
+✔ in-flight lock and stop cancel pending output (0.280134ms)
+✔ provider failure is contained (0.282868ms)
+✔ pause and opt-out survive handler recreation (0.670152ms)
+✔ group prompt does not impersonate a human or encourage targeting (0.174027ms)
+ℹ tests 25
+ℹ suites 0
+ℹ pass 25
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 90.689204
+
+Runtime: real Node server startup and /health 200 PASS with live services disabled.
+Syntax: features/annu.js, gpt.js, index.js PASS.
+No live model, WhatsApp, MongoDB, voice/image, browser or deployment tests performed.

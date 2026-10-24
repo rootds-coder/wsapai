@@ -1,0 +1,32 @@
+# Secrets — NEVER commit
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+
+# Build output (rebuild with: cd client && npm run build)
+dist/
+client/dist/
+
+# WhatsApp session (contains login credentials — NEVER commit/share)
+auth_info_baileys/
+auth_info*/
+
+# Runtime state
+data/*.json
+!data/*.example.json
+*.log
+logs/
+
+# Archives / media dumps
+*.zip
+*.7z
+
+# OS / editor
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.sw?

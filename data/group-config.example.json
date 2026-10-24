@@ -1,0 +1,8 @@
+{
+  "enabled": false,
+  "allowed": [],
+  "cooldownSeconds": 20,
+  "chance": 0,
+  "profanity": false,
+  "persona": "devil"
+}

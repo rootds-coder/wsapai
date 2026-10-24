@@ -1,0 +1,46 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> devils-ai@1.0.0 test
+> node --test tests/*.test.cjs
+
+✔ feminine grammar handles intervening words and chained verbs (2.02096ms)
+✔ preserves user, third person, quoted text and object agreement (0.643488ms)
+✔ accepts both history formats and preserves user words (1.321948ms)
+✔ persona switch resets history, removes system roles and menu (1.082448ms)
+✔ voice current turn de-duplicated and Gemini roles normalized (0.320332ms)
+✔ cleaner retains substantive answer and honest identity (0.409856ms)
+✔ primary uses same persona and history, excludes global KB (0.460523ms)
+✔ fallback uses identical prompt and normalized history with bounded request (0.94377ms)
+✔ provider outage does not invent an unrelated mood or topic (0.217126ms)
+✔ request histories remain isolated under concurrency (0.469246ms)
+✔ routing integration retains group source and skips KB before Annu (1.395869ms)
+✔ exact commands accept case, slash, whitespace and punctuation; prose stays prose (1.305624ms)
+✔ stop suppresses text, media and presence already in flight; start does not revive stale work (1.380296ms)
+✔ persisted pause survives new controller, and contacts remain independent (0.335174ms)
+✔ stop takes effect before slow persistence completes (7.184114ms)
+✔ a stale database read cannot undo a concurrent stop (0.466767ms)
+✔ read failure fails closed and failed stop write still suppresses pending output (1.102518ms)
+✔ command writes preserve ordering under rapid stop/start (1.447788ms)
+✔ disappearing-message wrapper still exposes STOP (0.226731ms)
+✔ default group mode is disabled and wildcard is not an allowlist (1.460626ms)
+✔ DM routed back, unlisted group and own message ignored (0.619492ms)
+✔ unmentioned text retained but no automatic spam (0.667755ms)
+✔ mention supports device-normalized PN and LID (0.394453ms)
+✔ reply to bot triggers; wrapped content unwrapped (0.28578ms)
+✔ cooldown and duplicate delivery suppressed (0.399431ms)
+✔ history stays inside its group (1.108277ms)
+✔ member stop/resume and admin-only pause/on (0.600323ms)
+✔ spontaneous option is opt-in (0.355294ms)
+✔ old messages are not replayed (0.414092ms)
+✔ in-flight lock and stop cancel pending output (0.374173ms)
+✔ provider failure is contained (0.31265ms)
+✔ pause and opt-out survive handler recreation (0.83085ms)
+✔ group prompt does not impersonate a human or encourage targeting (0.210576ms)
+ℹ tests 33
+ℹ suites 0
+ℹ pass 33
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 115.601985

@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+/* ── Design Token Layer (Cyber Obsidian & Neon Aurora Palette) ─────────────── */
+@layer base {
+  :root {
+    /* ── Layered Obsidian Backgrounds ── */
+    --bg:           #030508;
+    --bg-elevated:  #080c14;
+    --bg-surface:   #0d131f;
+    --bg-hover:     #141c2c;
+    --bg-alt:       #020306;
+    --input-bg:     #070a10;
+
+    /* ── High-Legibility Typography ── */
+    --text-primary:   #ffffff;
+    --text-secondary: #cbd5e1;
+    --text-muted:     #64748b;
+    --text-subtle:    #475569;
+
+    /* ── Vibrant Cyber Accents ── */
+    --primary:        #8b5cf6;
+    --primary-light:  #c084fc;
+    --primary-dark:   #6d28d9;
+    --accent-cyan:    #06b6d4;
+    --accent-green:   #10b981;
+    --accent-emerald: #00e575;
+    --accent-pink:    #f43f5e;
+    --success:        #10b981;
+    --warning:        #f59e0b;
+    --danger:         #ef4444;
+
+    /* ── Neon Glows ── */
+    --purple-glow:    rgba(139, 92, 246, 0.25);
+    --cyan-glow:      rgba(6, 182, 212, 0.25);
+    --green-glow:     rgba(0, 229, 117, 0.25);
+    --pink-glow:      rgba(244, 63, 94, 0.25);
+    --primary-dim:    rgba(139, 92, 246, 0.12);
+    --primary-border: rgba(139, 92, 246, 0.35);
+
+    /* ── Glass & Micro-Borders ── */
+    --border-default: rgba(255, 255, 255, 0.08);
+    --border-hover:   rgba(255, 255, 255, 0.18);
+    --border-accent:  rgba(139, 92, 246, 0.4);
+    --border-emerald: rgba(16, 185, 129, 0.4);
+
+    --glass-bg:        rgba(8, 12, 20, 0.82);
+    --glass-bg-strong: rgba(3, 5, 8, 0.94);
+    --glass-border:    rgba(255, 255, 255, 0.08);
+    --glass-blur:      blur(24px) saturate(180%);
+
+    /* ── Linear / Mesh Gradients ── */
+    --gradient-accent:   linear-gradient(135deg, #a855f7 0%, #6366f1 50%, #06b6d4 100%);
+    --gradient-emerald:  linear-gradient(135deg, #10b981 0%, #00e575 100%);
+    --gradient-surface:  linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 100%);
+    --gradient-card-glow: radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.15), transparent 70%);
+
+    /* ── High-End Soft Depth Shadows ── */
+    --shadow-sm:   0 4px 16px rgba(0, 0, 0, 0.5);
+    --shadow-md:   0 12px 32px rgba(0, 0, 0, 0.7);
+    --shadow-lg:   0 24px 64px rgba(0, 0, 0, 0.85);
+    --shadow-glow: 0 0 32px rgba(139, 92, 246, 0.2);
+
+    /* ── Radii & Motion ── */
+    --radius-lg:    18px;
+    --radius-md:    12px;
+    --radius-sm:    8px;
+    --radius-pill:  9999px;
+    --transition:   0.2s cubic-bezier(0.16, 1, 0.3, 1);
+
+    /* ── shadcn/ui CSS variable bridge ── */
+    --background:         var(--bg);
+    --foreground:         var(--text-primary);
+    --card:               var(--bg-elevated);
+    --card-foreground:    var(--text-primary);
+    --popover:            var(--bg-elevated);
+    --popover-foreground: var(--text-primary);
+    --primary-hsl:        262 83% 63%;
+    --secondary:          var(--bg-surface);
+    --secondary-foreground: var(--text-secondary);
+    --muted:              var(--bg-surface);
+    --muted-foreground:   var(--text-muted);
+    --accent:             var(--bg-hover);
+    --accent-foreground:  var(--text-primary);
+    --destructive:        #ef4444;
+    --destructive-foreground: #fff;
+    --border:             var(--border-default);
+    --input:              var(--input-bg);
+    --ring:               var(--primary);
+    --radius:             var(--radius-md);
+  }
+
+  /* ── Reset ── */
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    -webkit-font-smoothing:  antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+    background-color: var(--bg);
+    color: var(--text-primary);
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+}
+
+/* ── Ambient Radial Glow Canvas for Dashboard ────────────────────────────── */
+.dashboard-ambient-mesh {
+  background-image: 
+    radial-gradient(at 5% 10%, rgba(139, 92, 246, 0.08) 0px, transparent 45%),
+    radial-gradient(at 95% 15%, rgba(6, 182, 212, 0.06) 0px, transparent 40%),
+    radial-gradient(at 50% 90%, rgba(16, 185, 129, 0.05) 0px, transparent 50%);
+}
+
+/* ── Custom Scrollbars ── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
